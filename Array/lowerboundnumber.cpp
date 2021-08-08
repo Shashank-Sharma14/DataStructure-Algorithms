@@ -34,36 +34,29 @@ int lowerBound(vector<int> A, int Val) {
         }
 
     }
-//    cout << A[s] << " , " << A[e];
+   
 
-    if (A[e] > Val) {
+    if (A[s] > Val && s==0) {
 
-        return A[e - 1];
+        return A[e - 1];// when all elements are greater than Val
 
     }
-
-    else if (Val > A[e]) {
+   else {
 
         return A[e];
 
     }
 
-    else {
-
-        return -1;
-
-    }
+    
 
 }
 int main() {
-	// your code goes here
-   vector<int> arr={1,3,4,5,8,9};
-   int lowerBoundNumber;
-   cin>>lowerBoundNumber;
+    // your code goes here
+    vector<int> arr = { 1,3,4,5,8,9 };
+    int lowerBoundNumber;
+    cin >> lowerBoundNumber;
 
-   cout << lowerBound(arr, lowerBoundNumber);
+    cout << lowerBound(arr, lowerBoundNumber);
 
-	return 0;
+    return 0;
 }
-
-
